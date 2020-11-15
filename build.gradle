@@ -21,6 +21,11 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.9.jre7'
+	compile("club.minnced:discord-webhooks:0.3.1")
+	compile("net.dv8tion:JDA:4.2.0_168") {
+		exclude module: 'opus-java'
+	}
 }
 
 processResources {
@@ -78,5 +83,14 @@ publishing {
 	// To publish to maven local, no extra repositories are necessary. Just use the task `publishToMavenLocal`.
 	repositories {
 		// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+		jcenter()
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+		maven { url 'https://plugins.gradle.org/m2/'}
+		maven { url 'https://maven.fabric.io/public' }
+		maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+		maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+		mavenLocal()
 	}
 }
+
+jar.setDestinationDir(new File("D:\\DEVMCSERVEUR\\fabric\\mods"))
