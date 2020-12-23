@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "litopiaservices",
+  "id": "litopia_services",
   "version": "${version}",
 
   "name": "Litopia Services",
   "description": "Le plugin officielle de litopia",
   "authors": [
-    "MrSolarius"
+    "MrSolarius",
+    "LeChatonSousCoke"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -20,10 +21,12 @@
   "entrypoints": {
     "main": [
       "fr.litopia.services.LitopiaServices"
-    ]
+    ],
+    "client": [],
+    "server": []
   },
   "mixins": [
-    "modid.mixins.json"
+    "litopia_services.mixins.json"
   ],
 
   "depends": {

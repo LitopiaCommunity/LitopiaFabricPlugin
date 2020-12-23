@@ -93,4 +93,4 @@ publishing {
 	}
 }
 
-jar.setDestinationDir(new File("D:\\DEVMCSERVEUR\\fabric\\mods"))
+//jar.setDestinationDir(new File("D:\\DEVMCSERVEUR\\fabric\\mods"))
