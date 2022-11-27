@@ -1,10 +1,20 @@
 package fr.litopia.services;
 
-import net.fabricmc.api.ModInitializer;
+import fr.litopia.services.api.events.PlayerChatEvent;
+import fr.litopia.services.api.events.PlayerJoinEvent;
+import fr.litopia.services.api.events.PlayerLeaveEvent;
+import net.fabricmc.api.DedicatedServerModInitializer;
 
-public class LitopiaServices implements ModInitializer {
+public class LitopiaServices implements DedicatedServerModInitializer {
+
 	@Override
-	public void onInitialize() {
-		System.out.println("Inisialisation de LitopiaServices");
+	public void onInitializeServer() {
+		System.out.println("Litopia Service Initialized");
+
+		PlayerChatEvent.EVENT.register((player, message) ->	System.out.println("Chat event : " + player.getEntityName() + " : " + message));
+
+		PlayerJoinEvent.EVENT.register((player, server) -> System.out.println("Player join event : " + player.getEntityName()));
+
+		PlayerLeaveEvent.EVENT.register((player, server) -> System.out.println("Player leave event : " + player.getEntityName()));
 	}
 }

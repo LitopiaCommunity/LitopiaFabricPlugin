@@ -69,5 +69,3 @@ publishing {
 		mavenLocal()
 	}
 }
-
-//jar.setDestinationDir(new File("C:\\Users\\Louis\\Desktop\\mcServer\\mods"))

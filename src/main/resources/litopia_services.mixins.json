@@ -1,11 +1,10 @@
 {
   "required": true,
-  "minVersion": "0.8",
-  "package": "fr.litopia.services.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "package": "fr.litopia.services.api.mixin",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "MixinPlayerManager",
-    "ServerStatHandlerAccessor"
+    "PlayerManagerMixin",
+    "ServerPlayNetworkHandlerMixin"
   ],
   "client": [],
   "server": [],
