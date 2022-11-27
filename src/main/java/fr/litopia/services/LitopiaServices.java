@@ -1,8 +1,6 @@
 package fr.litopia.services;
 
-import fr.litopia.services.api.events.PlayerChatEvent;
-import fr.litopia.services.api.events.PlayerJoinEvent;
-import fr.litopia.services.api.events.PlayerLeaveEvent;
+import fr.litopia.services.api.events.*;
 import net.fabricmc.api.DedicatedServerModInitializer;
 
 public class LitopiaServices implements DedicatedServerModInitializer {
@@ -16,5 +14,9 @@ public class LitopiaServices implements DedicatedServerModInitializer {
 		PlayerJoinEvent.EVENT.register((player, server) -> System.out.println("Player join event : " + player.getEntityName()));
 
 		PlayerLeaveEvent.EVENT.register((player, server) -> System.out.println("Player leave event : " + player.getEntityName()));
+
+		PlayerDeathEvent.EVENT.register((player, damageSource) -> System.out.println("Player death event : " + player.getEntityName()+ " with death message : " + damageSource.getDeathMessage(player).getString()));
+
+		PlayerKillPlayerEvent.EVENT.register((killer, killed) -> System.out.println("Player kill player event : " + killed.getEntityName() + " killed by " + killer.getName().getString()));
 	}
 }
