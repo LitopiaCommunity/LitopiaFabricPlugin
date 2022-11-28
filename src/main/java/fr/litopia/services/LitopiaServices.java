@@ -2,6 +2,7 @@ package fr.litopia.services;
 
 import fr.litopia.services.api.events.*;
 import net.fabricmc.api.DedicatedServerModInitializer;
+import org.springframework.boot.SpringApplication;
 
 public class LitopiaServices implements DedicatedServerModInitializer {
 
@@ -18,5 +19,7 @@ public class LitopiaServices implements DedicatedServerModInitializer {
 		PlayerDeathEvent.EVENT.register((player, damageSource) -> System.out.println("Player death event : " + player.getEntityName()+ " with death message : " + damageSource.getDeathMessage(player).getString()));
 
 		PlayerKillPlayerEvent.EVENT.register((killer, killed) -> System.out.println("Player kill player event : " + killed.getEntityName() + " killed by " + killer.getName().getString()));
+
+		SpringApplication.run(LitopiaSpring.class);
 	}
 }
