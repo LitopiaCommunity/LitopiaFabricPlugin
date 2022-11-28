@@ -17,7 +17,7 @@ public class BotConfiguration {
 
     private static final Logger log = LoggerFactory.getLogger( BotConfiguration.class );
 
-    @Value("${token}")
+    @Value("${discord-bot.token}")
     private String token;
 
     @Bean

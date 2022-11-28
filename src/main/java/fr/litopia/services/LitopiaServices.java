@@ -10,9 +10,9 @@ public class LitopiaServices implements DedicatedServerModInitializer {
 	public void onInitializeServer() {
 		System.out.println("Litopia Service Initialized");
 
-		PlayerChatEvent.EVENT.register((player, message) ->	System.out.println("Chat event : " + player.getEntityName() + " : " + message));
+		//PlayerChatEvent.EVENT.register((player, message) ->	System.out.println("Chat event : " + player.getEntityName() + " : " + message));
 
-		PlayerJoinEvent.EVENT.register((player, server) -> System.out.println("Player join event : " + player.getEntityName()));
+		//PlayerJoinEvent.EVENT.register((player, server) -> System.out.println("Player join event : " + player.getEntityName()));
 
 		PlayerLeaveEvent.EVENT.register((player, server) -> System.out.println("Player leave event : " + player.getEntityName()));
 
