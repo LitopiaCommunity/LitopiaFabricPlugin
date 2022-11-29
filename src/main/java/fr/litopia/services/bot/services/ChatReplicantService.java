@@ -23,10 +23,10 @@ public class ChatReplicantService implements EventListener<ConnectEvent> {
     private static final Logger log = LoggerFactory.getLogger(BotConfiguration.class);
     private static final String MC_HEAD_URL = "https://crafatar.com/avatars/";
 
-    @Value("${discord-bot.replicant-webhook.id}")
+    @Value("${discord-bot.replicant.webhook.id}")
     private String secretWebhookId;
 
-    @Value("${discord-bot.replicant-webhook.token}")
+    @Value("${discord-bot.replicant.webhook.token}")
     private String secretWebhookToken;
 
     @Override

@@ -1,5 +1,7 @@
 discord-bot:
   token: place your token here
-  replicant-webhook:
-    id: the id of the webhook for the replicant channel
-    token: the token of the webhook for the replicant channel
+  replicant:
+    channel: place your channel id here
+    webhook:
+      id: the id of the webhook for the replicant channel
+      token: the token of the webhook for the replicant channel
